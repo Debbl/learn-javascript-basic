@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. 基本使用
+      var name = 'debbl';
+      var intro = '认真是一种可怕的力量';
+
+      // 2. 别的引号的使用
+      var message1 = 'Hello';
+      var message2 = 'Hello';
+      // 反引号 模板字符串
+      var message3 = `Hello, ${message1}, ${1 + 1}`;
+      console.log(message3);
+
+      // 3. 转义字符 \
+      var message4 = "It's a computer";
+      console.log(message4);
+
+      // 4. 字符串本身的方法和属性
+      var message5 = 'Hello World';
+      console.log(message5.length);
+
+      // 字符串操作
+      var nickname = 'ding';
+      var message = 'hello';
+      console.log(message + ' ' + nickname);
+      console.log(`${message} ${nickname}`);
+    </script>
+  </body>
+</html>

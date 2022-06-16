@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. 隐式转化
+      var isAdmin = true;
+      var num1 = 123; // true
+
+      // 2. 显式转换
+      console.log(Boolean(num1), Boolean(undefined));
+
+      // 注意事项
+      console.log(Boolean('')); // false
+      console.log(Boolean('0')); // true
+    </script>
+  </body>
+</html>

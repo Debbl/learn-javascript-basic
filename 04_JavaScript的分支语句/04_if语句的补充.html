@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // if 后的代码块，如果只有一行，可以省略 {}
+      var price = 5;
+      var weight = 7;
+      var totalPrice = price * weight;
+      if (weight > 5) totalPrice -= 8;
+      console.log('总价格：', totalPrice);
+
+      // if () 里会自动类型转换
+      if (123) {
+        console.log('true');
+      }
+    </script>
+  </body>
+</html>

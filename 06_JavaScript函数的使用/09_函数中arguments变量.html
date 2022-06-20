@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function foo(name, age) {
+        console.log('参数：', name, age);
+        console.log('arguments: ', arguments);
+        console.log(arguments[0]);
+        console.log(arguments[3]);
+      }
+
+      foo('bar', 18);
+
+      function sum() {
+        return Array.from(arguments).reduce((pre, cur) => pre + cur);
+      }
+
+      console.log(sum(10, 20));
+      console.log(sum(10, 20, 30));
+      console.log(sum(10, 20, 30, 40));
+    </script>
+  </body>
+</html>

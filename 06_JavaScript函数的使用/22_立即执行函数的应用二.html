@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="btn">按钮1</button>
+    <button class="btn">按钮2</button>
+    <button class="btn">按钮3</button>
+    <button class="btn">按钮4</button>
+
+    <script>
+      var btnEls = document.querySelectorAll('.btn');
+      console.log(btnEls);
+      // for (var i = 0; i < btnEls.length; i++) {
+      //   btnEls[i].addEventListener('click', function () {
+      //     alert(i);
+      //   });
+      // }
+
+      // for (var i = 0; i < btnEls.length; i++) {
+      //   (function (m) {
+      //     btnEls[m].addEventListener('click', function () {
+      //       alert(m + 1);
+      //     });
+      //   })(i);
+      // }
+
+      for (let i = 0; i < btnEls.length; i++) {
+        btnEls[i].addEventListener('click', function () {
+          alert(i + 1);
+        });
+      }
+      console.log(i);
+    </script>
+  </body>
+</html>

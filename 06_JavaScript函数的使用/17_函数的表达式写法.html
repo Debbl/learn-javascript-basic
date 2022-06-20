@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      foo();
+      function foo() {
+        console.log('foo函数被执行了');
+      }
+
+      // 函数为一个变量,在执行的时候才会赋值, 提前访问是 undefined, 无法调用函数
+      // bar();
+      var bar = function () {
+        console.log('bar函数被执行了');
+      };
+      bar();
+    </script>
+  </body>
+</html>

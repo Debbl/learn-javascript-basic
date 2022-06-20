@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. 常见的写法 函数当作一个表达式 执行
+      (function () {
+        console.log('函数执行');
+      })();
+
+      // 2. 匿名函数
+      (function () {
+        console.log('函数执行');
+      }());
+
+      // 3. 一个运算元的符号
+      +function () {console.log("函数执行1");}()
+      -function () {console.log("函数执行2");}()
+      !function () {console.log("函数执行3");}()
+    </script>
+  </body>
+</html>

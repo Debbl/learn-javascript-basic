@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. 全局作用域
+      var message = 'Hello World';
+      if (true) {
+        console.log(message);
+      }
+      function foo() {
+        console.log('foo中: ', message);
+      }
+      foo();
+
+      {
+        var count = 100;
+        console.log('代码块: count ', count);
+      }
+      console.log('代码块外: count', count);
+
+      for (var i = 0; i < 3; i++) {
+        console.log(i);
+        var foo = 'foo';
+      }
+      console.log(foo);
+      console.log(i);
+
+      function test() {
+        var bar = 'bar';
+      }
+      // console.log('bar: ', bar);
+
+      // 作用域链 (闭包)
+      function sayHello() {
+        var outer = 'outer';
+        function hi() {
+          console.log(outer);
+        }
+        hi();
+      }
+      sayHello();
+      // console.log(outer);
+    </script>
+  </body>
+</html>

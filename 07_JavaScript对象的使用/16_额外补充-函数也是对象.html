@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 原始类型
+      var name = 'foo';
+      var age = 18;
+
+      // 地址 - 指针 - 引用
+      var obj = {};
+      var foo = function () {};
+      function bar() {}
+      console.log(typeof obj); // object
+      console.log(typeof foo); // function -> object
+
+      function sayHello() {}
+      sayHello.age = 18;
+      console.log(sayHello.age);
+
+      function Dog() {}
+      // 构造函数添加的方法，为类方法, 可以直接通过类调用，不需要实例对象
+      Dog.running = function () {
+        console.log('OK');
+      };
+      Dog.running();
+    </script>
+  </body>
+</html>

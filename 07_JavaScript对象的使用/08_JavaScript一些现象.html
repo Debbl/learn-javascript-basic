@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 原始类型比较
+      var num1 = 123;
+      var num2 = 123;
+      console.log(num1 === num2);
+
+      // 1. 对象的比较
+      var obj1 = {};
+      var obj2 = {};
+      console.log(obj1 === obj2); // false
+
+      // 2. 引用赋值
+      var info = {
+        name: 'foo',
+        friend: {
+          name: 'bar',
+        },
+      };
+      var friend = info.friend;
+      friend.name = 'foo1';
+      console.log(info.friend.name); // foo1
+
+      // 3. 值传递
+      function foo(a) {
+        a = 200;
+      }
+      var num = 100;
+      foo(num);
+      console.log(num); // 100
+
+      // 4. 对象作为参数是引用传递
+      function bar(info) {
+        console.log(info);
+        info = {
+          name: 'debbl',
+        };
+        console.log(info);
+      }
+      var obj = {
+        name: 'obj',
+      };
+      bar(obj);
+      console.log(obj);
+
+      // 5. 引用传递 传递对象的地址
+      function foo1(a) {
+        a.name = 'foo1';
+      }
+      var obj1 = {
+        name: 'obj1',
+      };
+      foo1(obj1);
+      console.log(obj1);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. 直接调用 this 指向 window
+      function foo(name, age) {
+        console.log(arguments);
+        console.log(this); // window
+      }
+      foo();
+
+      // 2. 对象的引用调用，指向这个对象
+      var obj = {
+        name: 'obj1',
+        running: function () {
+          console.log('obj running ~');
+          console.log(this);
+        },
+      };
+      obj.running(); // obj
+
+      // 题目一
+      var fn = obj.running;
+      fn(); // window
+
+      // 题目二
+      var obj2 = {
+        name: 'obj2',
+        foo: foo,
+      };
+      obj2.foo(); // this -> obj2
+    </script>
+  </body>
+</html>

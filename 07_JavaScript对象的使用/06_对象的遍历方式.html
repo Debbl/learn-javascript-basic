@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var info = {
+        name: 'foo',
+        age: 18,
+        height: 1.88,
+      };
+
+      // 1. for
+      var infoKeys = Object.keys(info);
+      for (var i = 0; i < infoKeys.length; i++) {
+        console.log(`key: ${infoKeys[i]}, value: ${info[infoKeys[i]]}`);
+      }
+
+      console.log('=================================');
+
+      // 2. for...in...
+      for (var key in info) {
+        console.log(`key: ${key}, value: ${info[key]}`);
+      }
+
+      // 3. 对象默认不支持 for...of... 遍历
+      // for (var foo of info) {
+      // }
+    </script>
+  </body>
+</html>

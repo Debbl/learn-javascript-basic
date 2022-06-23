@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        overflow: auto;
+        border-left: 3px solid;
+        border-top: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nemo
+      obcaecati, ipsum quo modi aliquid minima fuga. Aut, sapiente quidem? Lorem
+      ipsum dolor sit amet, consectetur adipisicing elit. Saepe non perspiciatis
+      illo nostrum? Accusantium dicta sint ullam saepe, fugit itaque esse beatae
+      reiciendis eos quo, excepturi laboriosam architecto corrupti facilis.
+    </div>
+
+    <script>
+      var boxEl = document.querySelector('.box');
+      // client
+      console.log(boxEl.clientWidth);
+      console.log(boxEl.clientHeight);
+      console.log(boxEl.clientTop);
+      console.log(boxEl.clientLeft);
+      // offset
+      console.log(boxEl.offsetWidth);
+      console.log(boxEl.offsetHeight);
+      console.log(boxEl.offsetLeft);
+      console.log(boxEl.offsetTop);
+      // scroll
+      console.log(boxEl.scrollHeight);
+      console.log(boxEl.scrollTop);
+
+      window.onclick = function () {
+        console.log(boxEl.scrollTop);
+      };
+    </script>
+  </body>
+</html>

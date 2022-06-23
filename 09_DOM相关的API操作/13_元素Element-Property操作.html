@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="id-box" class="box" title="title-box" age="18" height="1.88">
+      我是box
+    </div>
+
+    <input type="checkbox" checked />
+
+    <script>
+      var boxEl = document.querySelector('.box');
+
+      // 标准的 Attribute 为 Property 可以为一个 DOM 对象的属性
+      console.log(
+        boxEl.id,
+        boxEl.className,
+        boxEl.title,
+        boxEl.age,
+        boxEl.height
+      );
+
+      console.log(document.querySelector('input').checked);
+
+      // Attribute 和 Property 相互影响
+      boxEl.setAttribute('id', 'id-box-1');
+      console.log(boxEl.id);
+      boxEl.id = 'id-box-2';
+      console.log(boxEl.getAttribute('id'));
+    </script>
+  </body>
+</html>

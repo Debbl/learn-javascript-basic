@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      th {
+        padding: 20px 30px;
+        border: 3px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>1-1</th>
+        <th>1-2</th>
+        <th>1-3</th>
+        <th>1-4</th>
+      </tr>
+      <tr>
+        <th>2-1</th>
+        <th>2-2</th>
+        <th>2-3</th>
+        <th>2-4</th>
+      </tr>
+      <tr>
+        <th>3-1</th>
+        <th>3-2</th>
+        <th>3-3</th>
+        <th>3-4</th>
+      </tr>
+      <tr>
+        <th>4-1</th>
+        <th>4-2</th>
+        <th>4-3</th>
+        <th>4-4</th>
+      </tr>
+    </table>
+
+    <script>
+      var tableEL = document.querySelector('table');
+      for (var i = 0; i < tableEL.rows.length; i++) {
+        tableEL.rows[i].cells[i].style.color = 'red';
+        tableEL.rows[i].cells[i].style.backgroundColor = 'green';
+      }
+    </script>
+  </body>
+</html>

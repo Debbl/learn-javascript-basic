@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="remove-btn">移除</button>
+    <button class="clone-btn">克隆</button>
+    <div class="box">
+      <h2>我是标题</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <script>
+      var boxEl = document.querySelector('.box');
+      var removeBtn = document.querySelector('.remove-btn');
+      var cloneBtn = document.querySelector('.clone-btn');
+
+      // 移除元素
+      removeBtn.onclick = function () {
+        boxEl.remove();
+      };
+
+      // 克隆元素
+      var counter = 0;
+      cloneBtn.onclick = function () {
+        var newNode = boxEl.cloneNode(true);
+        newNode.children[0].textContent = 'title' + counter++;
+        document.body.append(newNode);
+      };
+    </script>
+  </body>
+</html>

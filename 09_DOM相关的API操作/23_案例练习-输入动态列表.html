@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul class="list"></ul>
+
+    <script>
+      var listEl = document.querySelector('.list');
+
+      while (true) {
+        var result = prompt('请输入文字，为空退出');
+        if (result) {
+          console.log(result);
+          var liEl = document.createElement('li');
+          liEl.textContent = result;
+          listEl.append(liEl);
+        } else {
+          break;
+        }
+      }
+    </script>
+  </body>
+</html>

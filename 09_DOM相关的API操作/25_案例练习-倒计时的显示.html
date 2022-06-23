@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .cutdown {
+        display: flex;
+        align-items: center;
+      }
+      .time {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 6px;
+        color: white;
+        background-color: red;
+      }
+      .divide {
+        color: red;
+        padding: 0 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cutdown">
+      <span class="time hour">03</span>
+      <span class="divide">:</span>
+      <span class="time minute">00</span>
+      <span class="divide">:</span>
+      <span class="time second">01</span>
+    </div>
+
+    <script>
+      var hourEl = document.querySelector('.hour');
+      var minuteEl = document.querySelector('.minute');
+      var secondEl = document.querySelector('.second');
+      function padLeft(content, count = 2, padStr = '0') {
+        return String(content).padStart(count, padStr);
+      }
+      setInterval(function () {
+        var date = new Date();
+        var leftHour = padLeft(23 - date.getHours());
+        var leftMinute = padLeft(59 - date.getMinutes());
+        var leftSecond = padLeft(59 - date.getSeconds());
+        hourEl.textContent = leftHour;
+        minuteEl.textContent = leftMinute;
+        secondEl.textContent = leftSecond;
+        // console.log(`${leftHour}:${leftMinute}:${leftSecond}`);
+      }, 1000);
+    </script>
+  </body>
+</html>

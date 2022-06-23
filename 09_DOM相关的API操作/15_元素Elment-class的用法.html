@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .active {
+        color: red;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn">切换</button>
+    <div class="box">我是box</div>
+
+    <script>
+      var boxEl = document.querySelector('.box');
+      var btnEl = document.querySelector('.btn');
+
+      btnEl.onclick = function () {
+        // boxEl.classList.add('active');
+        // 切换
+        // if (boxEl.classList.contains('active')) {
+        //   boxEl.classList.remove('active');
+        // } else {
+        //   boxEl.classList.add('active');
+        // }
+
+        boxEl.classList.toggle('active');
+      };
+    </script>
+  </body>
+</html>

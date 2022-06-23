@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="#">
+      <label for="account">用户名</label>
+      <input id="account" name="account" type="text" />
+      <div></div>
+      <label for="password">密码</label>
+      <input id="password" name="password" type="password" />
+    </form>
+    <script>
+      var formEl = document.forms[0];
+      console.log(formEl);
+
+      document.addEventListener('click', function () {
+        console.log(formEl.elements.account.value); // name 属性
+        console.log(formEl.elements.password.value);
+      });
+    </script>
+  </body>
+</html>

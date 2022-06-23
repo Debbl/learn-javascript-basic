@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="id-box" class="box" title="title-box" age="18" height="1.88">
+      我是box
+    </div>
+
+    <input type="checkbox" />
+
+    <script>
+      var boxEl = document.querySelector('.box');
+      // 是否有 Attribute
+      console.log(boxEl.hasAttribute('id'));
+      console.log(boxEl.hasAttribute('abc'));
+
+      // 获取 Attribute 值
+      console.log(boxEl.getAttribute('id'));
+      console.log(boxEl.getAttribute('age'));
+      console.log(boxEl.getAttribute('height'));
+
+      console.log('=================================');
+      // 设置 Attribute 值
+      boxEl.setAttribute('id', 'set-id-box');
+      boxEl.setAttribute('age', '19');
+      boxEl.setAttribute('height', '1.89');
+      console.log(boxEl.getAttribute('id'));
+      console.log(boxEl.getAttribute('age'));
+      console.log(boxEl.getAttribute('height'));
+
+      // checked 只能获取字符串的值，这里是 “” 空字符 无法更好的使用
+      console.log(
+        document.querySelector('input').getAttribute('checked'),
+        '---'
+      );
+      // 可以通过 Property 获取
+      console.log(document.querySelector('input').checked);
+    </script>
+  </body>
+</html>

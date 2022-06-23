@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box">我是box</div>
+
+    <script>
+      var boxEl = document.querySelector('.box');
+
+      // 1. innerHTML 不推荐
+      // boxEl.innerHTML = `
+      //   <h2 class="title">我是标题</h2>
+      // `;
+
+      // 2. 创建一个 DOM 对象
+      var h2El = document.createElement('h2');
+      h2El.className = 'title';
+      h2El.textContent = '我是标题';
+
+      // 将元素插入 boxEl
+      // boxEl.append(h2El);
+      // boxEl.prepend(h2El);
+      // boxEl.after(h2El);
+      // boxEl.before(h2El);
+      boxEl.replaceWith(h2El, 'abc');
+    </script>
+  </body>
+</html>

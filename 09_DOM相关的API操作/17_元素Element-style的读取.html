@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        background-color: #0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" style="color: red; font-size: 30px">我是box</div>
+
+    <script>
+      var boxEl = document.querySelector('.box');
+
+      // 只能获取内联的 style 属性
+      console.log(boxEl.style.backgroundColor);
+
+      // 获取元素的所有计算的样式 getComputedStyle
+      console.log(getComputedStyle(boxEl).backgroundColor);
+      
+    </script>
+  </body>
+</html>

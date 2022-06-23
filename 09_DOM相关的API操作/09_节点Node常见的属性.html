@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 我是注释 -->
+    我是文本
+    <div class="box">
+      <h2>我是标题</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <script>
+      var bodyChildNodes = document.body.childNodes;
+      console.log(bodyChildNodes);
+      var commentNode = bodyChildNodes[1];
+      var textNode = bodyChildNodes[2];
+      var divBoxEl = bodyChildNodes[3];
+      console.log(commentNode, textNode, divBoxEl);
+      // 节点类型
+      console.log(commentNode.nodeType, textNode.nodeType, divBoxEl.nodeType);
+      console.log(Node.COMMENT_NODE, Node.TEXT_NODE, Node.ELEMENT_NODE); // 常量
+      console.log('----------------');
+      // 节点名称
+      console.log(commentNode.nodeName, textNode.nodeName, divBoxEl.nodeName);
+      // data
+      console.log(commentNode.date, textNode.data, divBoxEl.data);
+      console.log(
+        commentNode.nodeValue,
+        textNode.nodeValue,
+        divBoxEl.nodeValue
+      );
+    </script>
+  </body>
+</html>

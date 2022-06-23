@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      th {
+        padding: 20px 30px;
+        border: 3px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>姓名</th>
+          <th>年龄</th>
+          <th>身高</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>foo</th>
+          <th>18</th>
+          <th>1.88</th>
+        </tr>
+        <tr>
+          <th>bar</th>
+          <th>19</th>
+          <th>1.89</th>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+      var tableEl = document.querySelector('table');
+      var tRows = tableEl.rows;
+      console.log(tRows); // tr
+
+      console.log(tableEl.tBodies); // tbody
+
+      console.log(tableEl.tBodies[0].rows); // tbody -> tr
+
+      var tBodyEl = tableEl.tBodies[0];
+      console.log(tBodyEl.rows[0].cells); // th
+      console.log(tBodyEl.rows[0].sectionRowIndex); // 给定的 <tr> 在封闭的 <thead>/<tbody>/<tfoot> 中的位置（索引）；
+      console.log(tBodyEl.rows[0].rowIndex); // 在整个表格中 <tr> 的编号（包括表格的所有行）；
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var names = ['abc', 'cba', 'nba'];
+
+      // 1. 访问数组中的元素
+      console.log(names[0]);
+      console.log(names.at(0));
+      console.log(names[-1]); // undefined
+      console.log(names.at(-1)); // 'nba'
+
+      // 2. 修改数组中的元素
+      names[0] = 'foo';
+      console.log(names);
+
+      // 3. 新增数组中的元素
+      names[3] = 'bar';
+      console.log(names);
+      names[10] = 'bar1';
+      console.log(names);
+      names.push('aaa');
+      console.log(names);
+      names.pop();
+      console.log(names);
+
+      // 4. 删除数组中的元素
+      delete names[0];
+      console.log(names);
+    </script>
+  </body>
+</html>

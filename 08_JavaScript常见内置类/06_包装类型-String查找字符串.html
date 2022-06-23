@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var message = 'my name is foo';
+      var name = 'foo';
+
+      // 1. indexOf(searchString, fromIndex)
+      // 没有搜索到返回 -1
+      console.log(message.indexOf(name));
+
+      // 2. includes()
+      console.log(message.includes(name));
+
+      // 3. startWith()
+      console.log(message.startsWith('my'));
+
+      // 4. endWith()
+      console.log(message.endsWith('foo'));
+
+      // 5. replace() 替换字符串
+      // var newMessage = message.replace('foo', 'bar');
+      // console.log(newMessage, message);
+      var newMessage = message.replace('foo', function () {
+        return message.toUpperCase();
+      });
+      console.log(newMessage, message);
+    </script>
+  </body>
+</html>

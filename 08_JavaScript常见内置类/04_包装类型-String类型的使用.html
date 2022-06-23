@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var message = 'Hello World';
+      // 1. 属性 length
+      console.log(message.length);
+
+      // 2. 访问字符串的某个位置
+      // 它们的区别是索引的方式没有找到会返回undefined，而charAt没有找到会返回空字符串；
+      console.log(message[0]);
+      console.log(message[1]);
+      console.log(message[2]);
+      console.log('----------');
+      console.log(message.charAt(4));
+
+      // 3. 字符串的遍历
+      // for 普通遍历
+      for (var i = 0; i < message.length; i++) {
+        console.log(message[i]);
+      }
+      for (var char of message) {
+        console.log(char);
+      }
+      for (var k in message) {
+        console.log(k);
+        console.log(message[k]);
+      }
+    </script>
+  </body>
+</html>

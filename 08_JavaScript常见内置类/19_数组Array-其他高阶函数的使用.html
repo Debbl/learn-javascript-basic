@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var names = ['aaa', 'bbb', 'ccc', 'ddd'];
+
+      // 1. forEach()
+      names.forEach((item) => {
+        console.log(item);
+      });
+
+      console.log('=======================');
+
+      // 2. filter()
+      var students = [
+        { id: 101, name: 'foo1', age: 18 },
+        { id: 102, name: 'foo2', age: 19 },
+        { id: 103, name: 'foo3', age: 17 },
+        { id: 104, name: 'foo4', age: 18 },
+      ];
+      console.log(names.filter((item) => item === 'aaa' || item === 'bbb'));
+      console.log(students.filter((item) => item.id > 102));
+
+      // 3. map()
+      console.log(names.map((item) => item + 'aaa'));
+
+      // 4. reduce()
+      var nums = [2, 3, 1, 9];
+      console.log(nums.reduce((pre, cur) => pre + cur));
+    </script>
+  </body>
+</html>

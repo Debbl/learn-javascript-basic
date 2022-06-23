@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. 创建数组的方式
+      var names = ['foo', 'bar', 'foo1'];
+      var products = [
+        {
+          name: 'p1',
+          price: 10,
+        },
+        {
+          name: 'p2',
+          price: 20,
+        },
+        {
+          name: 'p3',
+          price: 30,
+        },
+      ];
+
+      // 2. 创建数组的方式 类 Array
+      var arr1 = new Array();
+      var arr2 = new Array('abc', 'cba', 'nba');
+      console.log(arr1, arr2);
+
+      var arr3 = new Array(3); // [empty × 3]
+      console.log(arr3);
+
+      // 3. 通过索引访问元素
+      console.log(names[0]);
+      console.log(names[names.length - 1]);
+    </script>
+  </body>
+</html>

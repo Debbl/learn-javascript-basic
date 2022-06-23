@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var names = ['aaa', 'bbb', 'ccc'];
+      // find 方法
+      // var tarName = names.find(function (value, index, arr) {
+      //   console.log(value);
+      //   return true;
+      // });
+      // console.log(tarName, '---');
+
+      var students = [
+        { id: 101, name: 'foo1', age: 18 },
+        { id: 102, name: 'foo2', age: 19 },
+        { id: 103, name: 'foo3', age: 17 },
+        { id: 104, name: 'foo4', age: 18 },
+      ];
+
+      Array.prototype.hyFind = function (fn, thisArg) {
+        for (var i = 0; i < this.length; i++) {
+          if (fn.apply(thisArg, [this[i], i, this])) {
+            return this[i];
+          }
+        }
+      };
+
+      names.hyFind(function (item) {
+        console.log(item);
+      });
+
+      console.log(
+        students.hyFind(function (item) {
+          console.log(item);
+          console.log('===');
+          return item.id === 102;
+        }),
+        '---'
+      );
+    </script>
+  </body>
+</html>

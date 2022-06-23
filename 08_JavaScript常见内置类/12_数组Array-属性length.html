@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. 获取数组的长度 length
+      var names = ['cba', 'nba', 'mba'];
+      console.log(names.length);
+
+      names.length = 10;
+      console.log(names);
+
+      names.length = 2;
+      console.log(names);
+      // 清空数组
+      // names.length = 0;
+      // console.log(names);
+
+      // 2. 数组的遍历
+      for (var i = 0; i < names.length; i++) {
+        console.log(names[i]);
+      }
+      console.log('===============');
+      for (var k in names) {
+        console.log(names[k]);
+      }
+      console.log('---------------');
+      for (var name of names) {
+        console.log(name);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var names = ['aaa', 'bbb', 'ccc'];
+
+      // forEach 遍历数组
+      // for (var i = 0; i < names.length; i++) {
+      //   console.log(names[i]);
+      // }
+      // console.log('=================');
+      // names.forEach((item, index, arr) => {
+      //   console.log(item, index, arr);
+      // });
+
+      // 版本一
+      // function hyForEach(fn) {
+      //   for (var i = 0; i < names.length; i++) {
+      //     fn(names[i], i, names);
+      //   }
+      // }
+      // hyForEach(function (item) {
+      //   console.log('----', item, i, names);
+      // });
+
+      // 版本二
+      // function hyForEach(fn, arr) {
+      //   for (var i = 0; i < arr.length; i++) {
+      //     fn(arr[i], i, arr);
+      //   }
+      // }
+      // hyForEach(function (item) {
+      //   console.log('----', item, i, names);
+      // }, names);
+      // hyForEach(
+      //   function (item) {
+      //     console.log('----', item, i, names);
+      //   },
+      //   [111, 222, 333]
+      // );
+
+      // 版本三
+      // names.hyForEach = function (fn) {
+      //   for (var i = 0; i < this.length; i++) {
+      //     fn(this[i], i, this);
+      //   }
+      // };
+      // names.hyForEach(function (item, i, arr) {
+      //   console.log('3---', item, i, arr);
+      // });
+
+      // 版本四
+      Array.prototype.hyForEach = function (fn) {
+        for (var i = 0; i < this.length; i++) {
+          fn(this[i], i, this);
+        }
+      };
+
+      names.hyForEach(function (item, i, arr) {
+        console.log(item, i, arr);
+      });
+
+      [111, 222, 333].hyForEach(function (item, i, arr) {
+        console.log(item, i, arr);
+      });
+    </script>
+  </body>
+</html>

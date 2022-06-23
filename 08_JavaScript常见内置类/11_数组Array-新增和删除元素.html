@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var names = ['abc', 'cba', 'nba', 'mba'];
+
+      // 1. 在数组的尾部添加元素
+      names.push('aaa');
+      names.push('aa1', 'aa2', 'aa3');
+      console.log(names);
+      // 尾部删除元素
+      names.pop();
+      var items = names.pop();
+      console.log('删除的元素：', items);
+      console.log(names);
+
+      // 2. 头部添加元素
+      names.unshift('111', '222');
+      console.log(names);
+      // 头部删除元素
+      names.shift();
+      console.log(names);
+
+      // 3. 在任意位置 添加/删除 元素
+      // 删除元素
+      names.splice(1, 1);
+      console.log(names);
+      console.log(names.splice(1, 2));
+      console.log(names);
+      // 新增元素
+      names.splice(0, 0, '111');
+      console.log(names);
+      // 替换元素
+      names.splice(0, 1, 'aaa');
+      console.log(names);
+    </script>
+  </body>
+</html>

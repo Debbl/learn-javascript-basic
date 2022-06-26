@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="#">
+      <label for="name">
+        name
+        <input id="name" type="text" />
+      </label>
+      <br />
+      <label for="password">
+        password
+        <input id="password" type="password" />
+      </label>
+      <br />
+      <input type="reset" value="重置" />
+      <input type="submit" value="提交" />
+    </form>
+
+    <script>
+      var inputNameEl = document.querySelector('#name');
+
+      inputNameEl.onfocus = function () {
+        console.log('input focus');
+      };
+      inputNameEl.onblur = function () {
+        console.log('input blur');
+      };
+      inputNameEl.onchange = function (event) {
+        console.log('input change', event.target.value);
+      };
+      inputNameEl.oninput = function (event) {
+        console.log('input input', event.target.value);
+      };
+      var formEl = document.querySelector('form');
+
+      formEl.onreset = function () {
+        console.log('form reset');
+      };
+      formEl.onsubmit = function () {
+        console.log('from submit');
+      };
+    </script>
+  </body>
+</html>

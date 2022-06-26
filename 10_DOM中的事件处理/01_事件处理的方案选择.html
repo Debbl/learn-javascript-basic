@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 1. 直接通过属性编写 -->
+    <button onclick="console.log('按钮1发生了点击~')">按钮1</button>
+    <button class="btn2">按钮2</button>
+    <button class="btn3">按钮3</button>
+
+    <script>
+      //  获取元素
+      var btn2El = document.querySelector('.btn2');
+      var btn3El = document.querySelector('.btn3');
+
+      // 处理
+      function handleClick() {
+        console.log('发生了点击~');
+      }
+      function handleClick2() {
+        console.log('2发生了点击~');
+      }
+      // 2. 属性 onclick
+      // btn2El.onclick = function () {
+      //   console.log('按钮2发生了点击~');
+      // };
+      // btn2El.onclick = handleClick;
+      // btn2El.onclick = handleClick2;
+
+      // 3. EventTarget
+      btn3El.addEventListener('click', function () {
+        console.log('按钮3发生了点击~');
+      });
+      btn3El.addEventListener('click', handleClick);
+      btn3El.addEventListener('click', function () {
+        console.log('按钮333发生了点击~');
+      });
+    </script>
+  </body>
+</html>

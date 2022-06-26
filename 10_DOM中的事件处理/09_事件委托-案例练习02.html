@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        background-color: #f00;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <button data-active="search">搜索</button>
+      <button data-active="new">新建</button>
+      <button data-active="remove">移除</button>
+    </div>
+
+    <script>
+      var divEl = document.querySelector('.box');
+      divEl.addEventListener('click', function (event) {
+        console.log(event.eventPhase);
+        if (event.eventPhase === Event.BUBBLING_PHASE) {
+          switch (event.target.dataset.active) {
+            case 'search':
+              console.log('search');
+              break; 
+            case 'new':
+              console.log('new');
+              break;
+            case 'remove':
+              console.log('remove');
+              break;
+            default:
+              console.log('OK');
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

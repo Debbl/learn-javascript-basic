@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box">
+      <button>新增</button>
+      <button>删除</button>
+      <button>搜索</button>
+    </div>
+    <script>
+      var boxEl = document.querySelector('.box');
+      // for (var i = 0; i < boxEl.children.length; i++) {
+      //   boxEl.children[i].onmouseenter = function () {
+      //     console.log(this.textContent);
+      //   };
+      // }
+
+      boxEl.onmouseover = function (event) {
+        console.log(event.eventPhase);
+        if (event.eventPhase === Event.BUBBLING_PHASE) {
+          console.log(event.target.textContent);
+        }
+      };
+    </script>
+  </body>
+</html>

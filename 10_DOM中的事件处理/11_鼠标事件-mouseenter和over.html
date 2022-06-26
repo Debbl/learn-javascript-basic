@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 300px;
+        background-color: #f00;
+      }
+
+      .box .inner {
+        width: 100px;
+        height: 100px;
+        background-color: #0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="inner"></div>
+    </div>
+
+    <script>
+      var boxEl = document.querySelector('.box');
+      var innerEl = document.querySelector('.inner');
+
+      // 第一组 enter leave
+      // boxEl.addEventListener('mouseenter', function () {
+      //   console.log('box 鼠标移入，进入');
+      // });
+      // boxEl.addEventListener('mouseleave', function () {
+      //   console.log('box 鼠标移出，离开');
+      // });
+
+      // innerEl.addEventListener('mouseenter', function () {
+      //   console.log('inner 鼠标移入，进入');
+      // });
+      // innerEl.addEventListener('mouseleave', function () {
+      //   console.log('inner 鼠标移出，离开');
+      // });
+
+      // 第二组 over out
+      boxEl.addEventListener('mouseover', function () {
+        console.log('box over');
+      });
+      boxEl.addEventListener('mouseout', function (event) {
+        console.log(event.eventPhase);
+        console.log('box out');
+      });
+      innerEl.addEventListener('mouseover', function () {
+        console.log('inner over');
+      });
+      innerEl.addEventListener('mouseout', function () {
+        console.log('inner out');
+      });
+    </script>
+  </body>
+</html>

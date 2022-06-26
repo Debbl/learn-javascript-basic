@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        display: flex;
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+      }
+      .box span {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://aiwan.run/">about</a>
+    <div class="box">
+      <span>
+        <button>按钮</button>
+      </span>
+    </div>
+    <script>
+      var divEl = document.querySelector('.box');
+      var spanEl = document.querySelector('span');
+      var btnEl = document.querySelector('button');
+
+      // 1. 阻止默认行为
+      var aEl = document.querySelector('a');
+      aEl.onclick = function (event) {
+        event.preventDefault();
+      };
+
+      // 2. 阻止事件的进一步传递
+      divEl.addEventListener('click', function (event) {
+        console.log('div click 事件 冒泡');
+        // event.stopPropagation();
+      });
+
+      spanEl.addEventListener('click', function () {
+        console.log('span click 事件 冒泡');
+        event.stopPropagation();
+      });
+
+      btnEl.addEventListener('click', function () {
+        console.log('button click 事件 冒泡');
+      });
+      divEl.addEventListener(
+        'click',
+        function () {
+          console.log('div click 事件 捕获');
+        },
+        true
+      );
+
+      spanEl.addEventListener(
+        'click',
+        function () {
+          console.log('span click 事件 捕获');
+        },
+        true
+      );
+
+      btnEl.addEventListener(
+        'click',
+        function () {
+          console.log('button click 事件 捕获');
+        },
+        true
+      );
+    </script>
+  </body>
+</html>

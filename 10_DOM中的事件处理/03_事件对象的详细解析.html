@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+      }
+      span {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span class="btn">
+        <button>按钮</button>
+      </span>
+    </div>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script>
+      var divEl = document.querySelector('div');
+      var btnEl = document.querySelector('.btn');
+      btnEl.onclick = function (event) {
+        console.log('按钮发生了点击~');
+        console.log(event);
+        console.log('事件类型', event.type);
+      };
+      divEl.onclick = function (event) {
+        // console.log('div 发生了点击~');
+        // console.log(event);
+        // console.log('事件阶段', event.eventPhase);
+        // console.log(event.offsetX, event.offsetY);
+        // console.log(event.clientX, event.clientY);
+        // console.log(event.pageX, event.pageY);
+        // console.log(event.screenX, event.screenY);
+        // target/ currentTarget
+        console.log(event.target);
+        console.log(event.currentTarget);
+        console.log(event.target === event.currentTarget);
+      };
+    </script>
+  </body>
+</html>
